@@ -14,12 +14,6 @@ public class Boromir extends Personagem implements Guerreiro, Humano {
         setSociedadeDoAnel(true);
     }
 
-    public String falar() {
-
-        return "One does not simply walk into";
-
-    }
-
     public void envelhecer() {
 
         if (this.getConstituicao() > 2) {
@@ -38,6 +32,12 @@ public class Boromir extends Personagem implements Guerreiro, Humano {
     public String toString() {
 
         return this.getConstituicao() + "-Bor ⚔";
+    }
+
+    public String falar() {
+
+        return "One does not simply walk into";
+
     }
 
 }
