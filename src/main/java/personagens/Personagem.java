@@ -107,19 +107,14 @@ public class Personagem {
 
     public String getName() {
 
-        final String SEM_NOME = "SEM NOME";
-        return SEM_NOME;
+        return null;
+        // implementacao nao necessaria
     }
 
     @Override
     public String toString() {
 
         return "P";
-    }
-
-    public String fimDeTurno() {
-
-        return this.getName() + " encerra seu turno na posicao " + this.getPosicao() + " com " + this.getConstituicao() + " de vida restante.";
     }
 
     public void atacar(List<Personagem> alvos){
@@ -165,16 +160,16 @@ public class Personagem {
             }
         }
 
-        if (this instanceof Mago){
-            if (isPodeSeMover()) {
-                for (Personagem alvo : alvos) {
+        if (this instanceof Mago && isPodeSeMover()) {
 
-                    this.setPodeSeMover(false);
+            for (Personagem alvo : alvos) {
 
-                    alvo.levarDano(this.inteligencia);
+                this.setPodeSeMover(false);
 
-                }
+                alvo.levarDano(this.inteligencia);
+
             }
+
         }
 
     }
