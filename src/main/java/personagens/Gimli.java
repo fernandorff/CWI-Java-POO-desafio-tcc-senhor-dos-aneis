@@ -15,6 +15,7 @@ public class Gimli extends Personagem implements Guerreiro, Anao {
     }
 
     public void beber() {
+        // nao implementado
 
     }
 
@@ -34,6 +35,7 @@ public class Gimli extends Personagem implements Guerreiro, Anao {
         return this.getConstituicao() + "-Gim ⚔";
     }
 
+    @Override
     public String getName() {
 
         return "Gimli";

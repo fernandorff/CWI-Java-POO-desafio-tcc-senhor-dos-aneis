@@ -30,6 +30,7 @@ public class Gandalf extends Personagem implements Mago, Maia {
         return this.getConstituicao() + "-Gan ⚚";
     }
 
+    @Override
     public String getName() {
 
         return "Gandalf";

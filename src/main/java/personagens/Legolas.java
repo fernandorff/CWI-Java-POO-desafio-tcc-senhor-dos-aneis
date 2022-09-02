@@ -30,6 +30,7 @@ public class Legolas extends Personagem implements Arqueiro, Elfo {
         return this.getConstituicao() + "-Leg \uD83C\uDFF9";
     }
 
+    @Override
     public String getName() {
 
         return "Legolas";

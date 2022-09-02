@@ -10,6 +10,7 @@ public class Personagem {
 
 
     public Personagem() {
+        // personagem nao pode ser criado
 
     }
 
@@ -57,30 +58,21 @@ public class Personagem {
         this.posicao = posicao;
     }
 
-    public int getForca() {
 
-        return forca;
-    }
 
     public void setForca(int forca) {
 
         this.forca = forca;
     }
 
-    public int getAgilidade() {
 
-        return agilidade;
-    }
 
     public void setAgilidade(int agilidade) {
 
         this.agilidade = agilidade;
     }
 
-    public int getInteligencia() {
 
-        return inteligencia;
-    }
 
     public void setInteligencia(int inteligencia) {
 
@@ -112,9 +104,11 @@ public class Personagem {
         this.sociedadeDoAnel = sociedadeDoAnel;
     }
 
+
     public String getName() {
 
-        return "sem nome";
+        final String SEM_NOME = "SEM NOME";
+        return SEM_NOME;
     }
 
     @Override

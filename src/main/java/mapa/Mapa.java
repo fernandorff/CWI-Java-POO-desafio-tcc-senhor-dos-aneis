@@ -9,7 +9,7 @@ import java.util.List;
 
 public class Mapa {
 
-    public boolean vitoriaSociedadeDoAnel = false;
+    private boolean vitoriaSociedadeDoAnel = false;
 
     List<String> mapaStrings = new LinkedList<>();
 
@@ -130,7 +130,7 @@ public class Mapa {
             personagem.atacar(viloesNoMapa);
 
             if (personagem.isPodeSeMover()) {
-                movimento(personagem, (LinkedList<Personagem>) heroisNoMapa);
+                movimento(personagem, heroisNoMapa);
             }
 
             atualizarMapa();
@@ -151,7 +151,7 @@ public class Mapa {
             personagem.atacar(heroisNoMapa);
 
             if (personagem.isPodeSeMover()) {
-                movimento(personagem, (LinkedList<Personagem>) viloesNoMapa);
+                movimento(personagem, viloesNoMapa);
             }
 
             atualizarMapa();

@@ -16,8 +16,7 @@ public class Goblin extends Personagem implements Arqueiro, Monstro {
 
     public String grunhir() {
 
-        final String GRUNHIDO = "Iiisshhhh";
-        return GRUNHIDO;
+        return "Iiisshhhh";
     }
 
     public String toString() {
@@ -25,6 +24,7 @@ public class Goblin extends Personagem implements Arqueiro, Monstro {
         return "\uD83C\uDFF9 Gob-" + this.getConstituicao();
     }
 
+    @Override
     public String getName() {
 
         return "Goblin";

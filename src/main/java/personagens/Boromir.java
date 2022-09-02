@@ -16,8 +16,7 @@ public class Boromir extends Personagem implements Guerreiro, Humano {
 
     public String falar() {
 
-        final String FALA = "One does not simply walk into Mordor.";
-        return FALA;
+        return "One does not simply walk into";
 
     }
 
@@ -30,14 +29,15 @@ public class Boromir extends Personagem implements Guerreiro, Humano {
 
     }
 
-    public String toString() {
-
-        return this.getConstituicao() + "-Bor ⚔";
-    }
-
+    @Override
     public String getName() {
 
         return "Boromir";
+    }
+
+    public String toString() {
+
+        return this.getConstituicao() + "-Bor ⚔";
     }
 
 }

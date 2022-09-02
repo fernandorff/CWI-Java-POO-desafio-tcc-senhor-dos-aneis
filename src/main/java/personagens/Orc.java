@@ -19,6 +19,7 @@ public class Orc extends Personagem implements Guerreiro, Monstro {
         return "⚔ Orc-" + this.getConstituicao();
     }
 
+    @Override
     public String getName() {
 
         return "Orc";
