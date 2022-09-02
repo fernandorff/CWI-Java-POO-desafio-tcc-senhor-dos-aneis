@@ -120,6 +120,7 @@ public class TestesObrigatorios {
         aragorn.setConstituicao(1);
         aragorn.envelhecer();
         aragorn.getName();
+        aragorn.falar();
 
         boromir.setConstituicao(2);
         boromir.envelhecer();
@@ -132,6 +133,17 @@ public class TestesObrigatorios {
         orc.getName();
         orc.grunhir();
         orc.toString();
+
+        urukhai.falar();
+        urukhai.grunhir();
+        urukhai.getName();
+        urukhai.setConstituicao(2);
+        urukhai.envelhecer();
+
+        Personagem personagemDeTesteMetodos = new Personagem();
+
+        personagemDeTesteMetodos.getName();
+        personagemDeTesteMetodos.toString();
 
         Assert.assertEquals("Legolas",legolas.getName());
 
