@@ -98,4 +98,16 @@ public class TestesObrigatorios {
 
     }
 
+    @Test
+    public void testandoMetodosDeRaca(){
+        gimli.beber();
+        gimli.falarSobrio();
+        gimli.falarBebado();
+        gimli.getName();
+
+        gandalf.ressucitar();
+        gandalf.falar();
+        gandalf.getName();
+    }
+
 }
