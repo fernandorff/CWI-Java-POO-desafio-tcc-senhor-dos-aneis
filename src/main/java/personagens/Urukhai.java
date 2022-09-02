@@ -15,14 +15,12 @@ public class Urukhai extends Personagem implements Guerreiro, Humano, Monstro {
         setSociedadeDoAnel(false);
     }
 
-    @Override
     public String falar() {
 
         return "Looks like meat's back on the menu boys!";
 
     }
 
-    @Override
     public void envelhecer() {
 
         if (this.getConstituicao() > 2) {
@@ -32,19 +30,16 @@ public class Urukhai extends Personagem implements Guerreiro, Humano, Monstro {
 
     }
 
-    @Override
     public String toString() {
 
         return "⚔ Uru-" + this.getConstituicao();
     }
 
-    @Override
     public String getName() {
 
         return "Urukhai";
     }
 
-    @Override
     public String grunhir() {
 
         return "Uuurrrrrr";

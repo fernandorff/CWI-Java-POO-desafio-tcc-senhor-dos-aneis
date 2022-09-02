@@ -14,26 +14,22 @@ public class Gandalf extends Personagem implements Mago, Maia {
         setSociedadeDoAnel(true);
     }
 
-    @Override
     public Gandalf ressucitar() {
 
         return null;
     }
 
-    @Override
     public String falar() {
 
         return "A Wizard is never late, nor is he early. He arrives precisely when he means to.";
 
     }
 
-    @Override
     public String toString() {
 
         return this.getConstituicao() + "-Gan ⚚";
     }
 
-    @Override
     public String getName() {
 
         return "Gandalf";

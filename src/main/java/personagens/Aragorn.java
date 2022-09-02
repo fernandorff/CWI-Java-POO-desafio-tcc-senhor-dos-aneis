@@ -39,13 +39,11 @@ public class Aragorn extends Personagem implements Guerreiro, Humano {
 
     }
 
-    @Override
     public String toString() {
 
         return this.getConstituicao() + "-Ara ⚔";
     }
 
-    @Override
     public String getName() {
 
         return "Aragorn";

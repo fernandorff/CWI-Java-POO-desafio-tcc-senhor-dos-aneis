@@ -14,26 +14,22 @@ public class Saruman extends Personagem implements Mago, Maia {
         setSociedadeDoAnel(false);
     }
 
-    @Override
     public Gandalf ressucitar() {
 
         return null;
     }
 
-    @Override
     public String falar() {
 
         return "Against the power of Mordor there can be no victory.";
 
     }
 
-    @Override
     public String toString() {
 
         return "⚚ Sar-" + this.getConstituicao();
     }
 
-    @Override
     public String getName() {
 
         return "Saruman";

@@ -1,6 +1,5 @@
 package personagens;
 
-import interfaceClasses.Arqueiro;
 import interfaceClasses.Guerreiro;
 import racas.Monstro;
 
@@ -15,19 +14,16 @@ public class Orc extends Personagem implements Guerreiro, Monstro {
         setSociedadeDoAnel(false);
     }
 
-    @Override
     public String toString() {
 
         return "⚔ Orc-" + this.getConstituicao();
     }
 
-    @Override
     public String getName() {
 
         return "Orc";
     }
 
-    @Override
     public String grunhir() {
 
         return "Arrrggghhh";

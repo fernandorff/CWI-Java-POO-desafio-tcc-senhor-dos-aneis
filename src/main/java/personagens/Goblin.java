@@ -14,22 +14,20 @@ public class Goblin extends Personagem implements Arqueiro, Monstro {
         setSociedadeDoAnel(false);
     }
 
-    @Override
+    public String grunhir() {
+
+        final String GRUNHIDO = "Iiisshhhh";
+        return GRUNHIDO;
+    }
+
     public String toString() {
 
         return "\uD83C\uDFF9 Gob-" + this.getConstituicao();
     }
 
-    @Override
     public String getName() {
 
         return "Goblin";
-    }
-
-    @Override
-    public String grunhir() {
-
-        return "Iiisshhhh";
     }
 
 }
