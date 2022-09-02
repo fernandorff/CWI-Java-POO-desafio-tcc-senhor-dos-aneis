@@ -1,6 +1,5 @@
 package mapa;
 
-import classes.Guerreiro;
 import erros.SauronDominaOMundoException;
 import personagens.Personagem;
 import racas.Humano;
@@ -112,32 +111,6 @@ public class Mapa {
                 break;
 
             }
-        }
-    }
-
-    public void ataqueDoGuerreiro(Personagem personagem, LinkedList<Personagem> alvos) {
-
-        int direcao = 1;
-        if (personagem.isSociedadeDoAnel()) {
-            direcao = -1;
-        }
-
-        if (personagem instanceof Guerreiro) {
-            for (Personagem alvo : alvos) {
-                if (personagem.getPosicao() == alvo.getPosicao() + direcao) {
-
-                    System.out.println(personagem.getName() + " ataca " + alvo.getName() + " causando " + (personagem.getForca() * 2) + " de dano!");
-
-                    System.out.println(personagem.fimDeTurno());
-
-                    alvo.levarDano(personagem.getForca() * 2);
-                    personagem.setPodeSeMover(false);
-                    break;
-
-                }
-
-            }
-
         }
     }
 

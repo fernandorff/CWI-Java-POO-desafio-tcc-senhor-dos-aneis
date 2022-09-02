@@ -93,8 +93,6 @@ public class Personagem {
         return constituicao;
     }
 
-
-
     public void setConstituicao(int constituicao) {
 
         this.constituicao = constituicao;
@@ -131,11 +129,6 @@ public class Personagem {
         return this.getName() + " encerra seu turno na posicao " + this.getPosicao() + " com " + this.getConstituicao() + " de vida restante.";
     }
 
-//    public int calcularDano(int multiplicador) {
-//
-//        if (this instanceof Guerreiro)
-//    }
-
     public void atacar(List<Personagem> alvos){
 
         if (this instanceof Guerreiro){
@@ -147,11 +140,11 @@ public class Personagem {
             for (Personagem alvo : alvos) {
                 if (this.getPosicao() == alvo.getPosicao() + direcao) {
 
-                    System.out.println(this.getName() + " ataca " + alvo.getName() + " causando " + (this.getForca() * 2) + " de dano!");
+                    System.out.println(this.getName() + " ataca " + alvo.getName() + " causando " + (this.forca * 2) + " de dano!");
 
                     System.out.println(this.fimDeTurno());
 
-                    alvo.levarDano(this.getForca() * 2);
+                    alvo.levarDano(this.forca * 2);
                     this.setPodeSeMover(false);
                     break;
 
@@ -191,11 +184,11 @@ public class Personagem {
             if (isPodeSeMover()) {
                 for (Personagem alvo : alvos) {
 
-                    System.out.println(this.getName() + " ataca " + alvo.getName() + " causando " + (this.getInteligencia()) + " de dano!");
+                    System.out.println(this.getName() + " ataca " + alvo.getName() + " causando " + (this.inteligencia) + " de dano!");
 
                     this.setPodeSeMover(false);
 
-                    alvo.levarDano(this.getInteligencia());
+                    alvo.levarDano(this.inteligencia);
 
                 }
             }
