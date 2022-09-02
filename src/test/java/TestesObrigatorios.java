@@ -108,6 +108,31 @@ public class TestesObrigatorios {
         gandalf.ressucitar();
         gandalf.falar();
         gandalf.getName();
+
+        legolas.falarElfico();
+        legolas.falar();
+        legolas.getName();
+
+        saruman.ressucitar();
+        saruman.falar();
+        saruman.getName();
+
+        aragorn.setConstituicao(1);
+        aragorn.envelhecer();
+        aragorn.getName();
+
+        boromir.setConstituicao(2);
+        boromir.envelhecer();
+        boromir.getName();
+        boromir.falar();
+
+        goblin.grunhir();
+        goblin.getName();
+
+        orc.getName();
+        orc.grunhir();
+        orc.toString();
+
     }
 
 }
