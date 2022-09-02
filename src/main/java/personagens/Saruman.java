@@ -30,6 +30,7 @@ public class Saruman extends Personagem implements Mago, Maia {
         return "⚚ Sar-" + this.getConstituicao();
     }
 
+    @Override
     public String getName() {
 
         return "Saruman";

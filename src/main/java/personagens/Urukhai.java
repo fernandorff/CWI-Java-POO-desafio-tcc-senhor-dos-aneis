@@ -35,6 +35,7 @@ public class Urukhai extends Personagem implements Guerreiro, Humano, Monstro {
         return "⚔ Uru-" + this.getConstituicao();
     }
 
+    @Override
     public String getName() {
 
         return "Urukhai";
