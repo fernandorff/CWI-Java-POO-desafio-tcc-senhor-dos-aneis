@@ -11,6 +11,8 @@ public class Aragorn extends Personagem implements Guerreiro, Humano {
 
     public Aragorn() {
 
+        super();
+
         setForca(10);
         setAgilidade(7);
         setInteligencia(6);
@@ -20,14 +22,14 @@ public class Aragorn extends Personagem implements Guerreiro, Humano {
 
     }
 
-    @Override
+
     public String falar() {
 
         return "A day may come when the courage of men fails… but it is not THIS day.";
 
     }
 
-    @Override
+
     public void envelhecer() {
 
         if (this.getConstituicao() > 1) {

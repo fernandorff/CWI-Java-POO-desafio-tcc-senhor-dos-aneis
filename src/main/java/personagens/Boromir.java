@@ -14,14 +14,13 @@ public class Boromir extends Personagem implements Guerreiro, Humano {
         setSociedadeDoAnel(true);
     }
 
-    @Override
     public String falar() {
 
-        return "One does not simply walk into Mordor.";
+        final String FALA = "One does not simply walk into Mordor.";
+        return FALA;
 
     }
 
-    @Override
     public void envelhecer() {
 
         if (this.getConstituicao() > 2) {
@@ -31,13 +30,11 @@ public class Boromir extends Personagem implements Guerreiro, Humano {
 
     }
 
-    @Override
     public String toString() {
 
         return this.getConstituicao() + "-Bor ⚔";
     }
 
-    @Override
     public String getName() {
 
         return "Boromir";
