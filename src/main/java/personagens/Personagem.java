@@ -1,5 +1,7 @@
 package personagens;
 
+import java.util.List;
+
 public class Personagem {
 
     private int forca;
@@ -121,6 +123,10 @@ public class Personagem {
     public int calcularDano(int multiplicador) {
 
         return this.getForca();
+    }
+
+    public void atacar(List<Personagem> alvo){
+
     }
 
 }

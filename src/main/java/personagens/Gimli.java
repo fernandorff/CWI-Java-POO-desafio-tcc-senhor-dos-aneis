@@ -35,7 +35,7 @@ public class Gimli extends Guerreiro implements Anao {
     @Override
     public String toString() {
 
-        return " Gim ⚔ ";
+        return this.getConstituicao() + "-Gim ⚔";
     }
 
     @Override

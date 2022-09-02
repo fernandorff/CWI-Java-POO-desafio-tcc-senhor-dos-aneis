@@ -35,7 +35,7 @@ public class Urukhai extends Guerreiro implements Humano, Monstro {
     @Override
     public String toString() {
 
-        return " ⚔ Uru ";
+        return "⚔ Uru-" + this.getConstituicao();
     }
 
     @Override

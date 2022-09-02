@@ -30,7 +30,7 @@ public class Legolas extends Arqueiro implements Elfo {
     @Override
     public String toString() {
 
-        return " Leg \uD83C\uDFF9 ";
+        return this.getConstituicao() + "-Leg \uD83C\uDFF9";
     }
 
     @Override

@@ -17,7 +17,7 @@ public class Orc extends Guerreiro implements Monstro {
     @Override
     public String toString() {
 
-        return " ⚔ Orc ";
+        return "⚔ Orc-" + this.getConstituicao();
     }
 
     @Override

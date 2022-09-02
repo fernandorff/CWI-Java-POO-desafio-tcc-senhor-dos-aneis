@@ -30,7 +30,7 @@ public class Gandalf extends Mago implements Maia {
     @Override
     public String toString() {
 
-        return " Gan ⚚ ";
+        return this.getConstituicao() + "-Gan ⚚";
     }
 
     @Override

@@ -33,8 +33,11 @@ public class TestesObrigatorios {
     public void deveVencerSociedadeQuandoAragornELegolasBatalharemContraOrcEGoblim() {
 
         mapa.inserir(0, legolas);
+
         mapa.inserir(1, aragorn);
+
         mapa.inserir(8, orc);
+
         mapa.inserir(9, goblin);
 
         Assert.assertTrue(simulador.isVitoriaDaSociedadeDoAnel());
@@ -45,10 +48,15 @@ public class TestesObrigatorios {
     public void deveLancarSauronDominaOMundoExceptionQuandoInimigosDerrotaremMembrosDaSociedade() {
 
         mapa.inserir(0, legolas);
+
         mapa.inserir(1, gimli);
+
         mapa.inserir(6, urukhai);
+
         mapa.inserir(7, orc);
+
         mapa.inserir(8, goblin);
+
         mapa.inserir(9, saruman);
 
         simulador.simular();
@@ -89,7 +97,5 @@ public class TestesObrigatorios {
         simulador.simular();
 
     }
-
-
 
 }

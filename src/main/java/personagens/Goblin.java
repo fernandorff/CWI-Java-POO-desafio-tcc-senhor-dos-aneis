@@ -17,7 +17,7 @@ public class Goblin extends Arqueiro implements Monstro {
     @Override
     public String toString() {
 
-        return " \uD83C\uDFF9 Gob ";
+        return "\uD83C\uDFF9 Gob-" + this.getConstituicao();
     }
 
     @Override

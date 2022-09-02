@@ -1,8 +1,6 @@
 package mapa;
 
-import classes.Arqueiro;
 import classes.Guerreiro;
-import classes.Mago;
 import erros.SauronDominaOMundoException;
 import personagens.Personagem;
 import racas.Humano;
@@ -49,12 +47,12 @@ public class Mapa {
 
     public void mostrarMapa() {
 
-        System.out.println("");
-        System.out.println(" _   |~  _                                                                                              \uD83C\uDF29 \uD83C\uDF29(\uD83D\uDC41️)\uD83C\uDF29 \uD83C\uDF29\n" +
-                "[_]--'--[_]                                                                                                 /vvv\\\n" +
-                "|'|\"\"`\"\"|'|                                                                                                /V V V\\\n" +
-                "| | /^\\ | |                                                                                               /V  V  V\\\n" +
-                "|_|_|I|_|_|                                                                                              /,,,,,,,,,\\ ");
+        System.out.println("          ");
+        System.out.println(" _   |~  _                                                                                                        \uD83C\uDF29 \uD83C\uDF29(\uD83D\uDC41️)\uD83C\uDF29 \uD83C\uDF29\n" +
+                "[_]--'--[_]                                                                                                           /vvv\\\n" +
+                "|'|\"\"`\"\"|'|                                                                                                          /V V V\\\n" +
+                "| | /^\\ | |                                                                                                         /V  V  V\\\n" +
+                "|_|_|I|_|_|                                                                                                        /,,,,,,,,,\\ ");
         System.out.print(".............");
 
         for (int i = 0; i < 10; i++) {
@@ -73,7 +71,7 @@ public class Mapa {
 
         mapa.clear();
         for (int i = 0; i < 10; i++) {
-            mapa.add(i, ".......");
+            mapa.add(i, "........");
 
         }
         for (Personagem personagem : heroisNoMapa) {
@@ -119,9 +117,9 @@ public class Mapa {
 
     public void ataqueDoGuerreiro(Personagem personagem, LinkedList<Personagem> alvos) {
 
-        int direcao = -1;
-        if (!personagem.isSociedadeDoAnel()) {
-            direcao = 1;
+        int direcao = 1;
+        if (personagem.isSociedadeDoAnel()) {
+            direcao = -1;
         }
 
         if (personagem instanceof Guerreiro) {
@@ -139,88 +137,6 @@ public class Mapa {
                 }
 
             }
-
-        }
-    }
-
-    public void ataqueDoArqueiro(Personagem personagem, LinkedList<Personagem> alvos) {
-
-        int direcao = -1;
-        if (!personagem.isSociedadeDoAnel()) {
-            direcao = 1;
-        }
-        int distancia = 3;
-
-        if (personagem instanceof Arqueiro) {
-            boolean atacou = false;
-
-            for (Personagem alvo : alvos) {
-                if (personagem.getPosicao() == alvo.getPosicao() + (distancia * direcao)) {
-
-                    System.out.println(personagem.getName() + " ataca " + alvo.getName() + " causando " + (personagem.calcularDano(distancia)) + " de dano!");
-
-                    System.out.println(personagem.fimDeTurno());
-
-                    atacou = true;
-
-                    alvo.levarDano(personagem.calcularDano(distancia));
-                    personagem.setPodeSeMover(false);
-                    break;
-                }
-            }
-            distancia -= 1;
-
-            if (!atacou) {
-                for (Personagem alvo : alvos) {
-                    if (personagem.getPosicao() == alvo.getPosicao() + (distancia * direcao)) {
-
-                        System.out.println(personagem.getName() + " ataca " + alvo.getName() + " causando " + (personagem.calcularDano(distancia)) + " de dano!");
-
-                        System.out.println(personagem.fimDeTurno());
-
-                        atacou = true;
-
-                        alvo.levarDano(personagem.calcularDano(distancia));
-                        personagem.setPodeSeMover(false);
-                        break;
-                    }
-                }
-            }
-            distancia -= 1;
-
-            if (!atacou) {
-                for (Personagem alvo : alvos) {
-                    if (personagem.getPosicao() == alvo.getPosicao() + (distancia * direcao)) {
-
-                        System.out.println(personagem.getName() + " ataca " + alvo.getName() + " causando " + (personagem.calcularDano(distancia)) + " de dano!");
-
-                        System.out.println(personagem.fimDeTurno());
-
-                        alvo.levarDano(personagem.calcularDano(distancia));
-                        personagem.setPodeSeMover(false);
-                        break;
-                    }
-                }
-            }
-
-        }
-
-    }
-
-    public void ataqueDoMago(Personagem personagem, LinkedList<Personagem> alvos) {
-
-        if (personagem instanceof Mago) {
-
-            for (Personagem alvo : alvos) {
-
-                System.out.println(personagem.getName() + " ataca " + alvo.getName() + " causando " + (personagem.getInteligencia()) + " de dano!");
-
-                personagem.setPodeSeMover(false);
-
-                alvo.levarDano(personagem.getInteligencia());
-
-            }
-            System.out.println(personagem.fimDeTurno());
 
         }
     }
@@ -261,11 +177,7 @@ public class Mapa {
                 ((Humano) personagem).envelhecer();
             }
 
-            ataqueDoGuerreiro(personagem, (LinkedList<Personagem>) viloesNoMapa);
-
-            ataqueDoArqueiro(personagem, (LinkedList<Personagem>) viloesNoMapa);
-
-            ataqueDoMago(personagem, (LinkedList<Personagem>) viloesNoMapa);
+            personagem.atacar(viloesNoMapa);
 
             if (personagem.isPodeSeMover()) {
                 movimento(personagem, (LinkedList<Personagem>) heroisNoMapa);
@@ -281,7 +193,7 @@ public class Mapa {
 
     public void passarTurnoViloes() {
 
-        System.out.println("\n### TURNO DOS HEROIS ###\n");
+        System.out.println("\n### TURNO DOS VILOES ###\n");
 
         for (Personagem personagem : viloesNoMapa) {
             personagem.setPodeSeMover(true);
@@ -291,11 +203,7 @@ public class Mapa {
                 ((Humano) personagem).envelhecer();
             }
 
-            ataqueDoGuerreiro(personagem, (LinkedList<Personagem>) heroisNoMapa);
-
-            ataqueDoArqueiro(personagem, (LinkedList<Personagem>) heroisNoMapa);
-
-            ataqueDoMago(personagem, (LinkedList<Personagem>) heroisNoMapa);
+            personagem.atacar(heroisNoMapa);
 
             if (personagem.isPodeSeMover()) {
                 movimento(personagem, (LinkedList<Personagem>) viloesNoMapa);

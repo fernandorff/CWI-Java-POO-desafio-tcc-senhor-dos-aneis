@@ -30,7 +30,7 @@ public class Saruman extends Mago implements Maia {
     @Override
     public String toString() {
 
-        return " ⚚ Sar ";
+        return "⚚ Sar-" + this.getConstituicao();
     }
 
     @Override

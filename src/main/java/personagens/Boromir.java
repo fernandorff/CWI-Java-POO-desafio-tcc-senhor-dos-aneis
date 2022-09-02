@@ -34,7 +34,7 @@ public class Boromir extends Guerreiro implements Humano {
     @Override
     public String toString() {
 
-        return " Bor ⚔ ";
+        return this.getConstituicao() + "-Bor ⚔";
     }
 
     @Override

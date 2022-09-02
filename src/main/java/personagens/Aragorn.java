@@ -34,7 +34,7 @@ public class Aragorn extends Guerreiro implements Humano {
     @Override
     public String toString() {
 
-        return " Ara ⚔ ";
+        return this.getConstituicao() + "-Ara ⚔";
     }
 
     @Override
