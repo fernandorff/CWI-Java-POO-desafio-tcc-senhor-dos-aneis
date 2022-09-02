@@ -133,6 +133,8 @@ public class TestesObrigatorios {
         orc.grunhir();
         orc.toString();
 
+        Assert.assertEquals("Legolas",legolas.getName());
+
     }
 
 }
