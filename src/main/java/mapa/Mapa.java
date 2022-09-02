@@ -44,26 +44,6 @@ public class Mapa {
 
     }
 
-    public void mostrarMapa() {
-
-        System.out.println("          ");
-        System.out.println(" _   |~  _                                                                                                        \uD83C\uDF29 \uD83C\uDF29(\uD83D\uDC41️)\uD83C\uDF29 \uD83C\uDF29\n" +
-                "[_]--'--[_]                                                                                                           /vvv\\\n" +
-                "|'|\"\"`\"\"|'|                                                                                                          /V V V\\\n" +
-                "| | /^\\ | |                                                                                                         /V  V  V\\\n" +
-                "|_|_|I|_|_|                                                                                                        /,,,,,,,,,\\ ");
-        System.out.print(".............");
-
-        for (int i = 0; i < 10; i++) {
-            System.out.print("\uD83C\uDF32");
-            System.out.print(mapa.get(i));
-        }
-        System.out.print("\uD83C\uDF32");
-        System.out.print("...............");
-        System.out.println("\n");
-
-    }
-
     public void atualizarMapa() {
 
         verificarFim();
@@ -79,7 +59,7 @@ public class Mapa {
             if (personagem.getConstituicao() <= 0) {
                 mapa.remove(personagem.toString());
                 heroisNoMapa.remove(personagem);
-                System.out.println(personagem.getName() + " morre!");
+
                 atualizarMapa();
                 break;
             }
@@ -90,7 +70,7 @@ public class Mapa {
             if (personagem.getConstituicao() <= 0) {
                 mapa.remove(personagem.toString());
                 viloesNoMapa.remove(personagem);
-                System.out.println(personagem.getName() + " morre!");
+
                 atualizarMapa();
                 break;
             }
@@ -123,7 +103,7 @@ public class Mapa {
 
         for (Personagem aliado : aliados) {
             if (personagem.getPosicao() == aliado.getPosicao() + direcao) {
-                System.out.println(personagem.getName() + " esta travado e nao pode se mover nem atacar!");
+
                 personagem.setPodeSeMover(false);
 
             }
@@ -131,7 +111,7 @@ public class Mapa {
         }
         if ((personagem.getPosicao() >= 0 && personagem.getPosicao() < 10 && personagem.isPodeSeMover())) {
             personagem.mover();
-            System.out.println(personagem.fimDeTurno());
+
             personagem.setPodeSeMover(false);
 
         }
@@ -140,11 +120,8 @@ public class Mapa {
 
     public void passarTurnoHerois() {
 
-        System.out.println("\n### TURNO DOS HEROIS ###\n");
-
         for (Personagem personagem : heroisNoMapa) {
             personagem.setPodeSeMover(true);
-            System.out.println(">>> Turno do " + personagem.getName());
 
             if (personagem instanceof Humano) {
                 ((Humano) personagem).envelhecer();
@@ -158,19 +135,14 @@ public class Mapa {
 
             atualizarMapa();
 
-            mostrarMapa();
-
         }
 
     }
 
     public void passarTurnoViloes() {
 
-        System.out.println("\n### TURNO DOS VILOES ###\n");
-
         for (Personagem personagem : viloesNoMapa) {
             personagem.setPodeSeMover(true);
-            System.out.println(">>> Turno do " + personagem.getName());
 
             if (personagem instanceof Humano) {
                 ((Humano) personagem).envelhecer();
@@ -183,8 +155,6 @@ public class Mapa {
             }
 
             atualizarMapa();
-
-            mostrarMapa();
 
         }
 

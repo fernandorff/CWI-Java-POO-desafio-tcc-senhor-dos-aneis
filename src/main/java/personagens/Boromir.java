@@ -25,7 +25,7 @@ public class Boromir extends Personagem implements Guerreiro, Humano {
 
         if (this.getConstituicao() > 2) {
             setConstituicao(this.getConstituicao() - 2);
-            System.out.println(this.getName() + " envelhece e perde 2 de vida!");
+
         }
 
     }

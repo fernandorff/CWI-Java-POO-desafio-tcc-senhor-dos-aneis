@@ -44,7 +44,6 @@ public class Personagem {
         } else {
             setPosicao(getPosicao() - 1);
         }
-        System.out.println(this.getName() + " se move para a posicao " + this.getPosicao());
 
     }
 
@@ -140,10 +139,6 @@ public class Personagem {
             for (Personagem alvo : alvos) {
                 if (this.getPosicao() == alvo.getPosicao() + direcao) {
 
-                    System.out.println(this.getName() + " ataca " + alvo.getName() + " causando " + (this.forca * 2) + " de dano!");
-
-                    System.out.println(this.fimDeTurno());
-
                     alvo.levarDano(this.forca * 2);
                     this.setPodeSeMover(false);
                     break;
@@ -165,10 +160,6 @@ public class Personagem {
                     for (Personagem alvo : alvos) {
                         if (this.getPosicao() == alvo.getPosicao() + (distancia * direcao)) {
 
-                            System.out.println(this.getName() + " ataca " + alvo.getName() + " causando " + (this.agilidade*distancia) + " de dano!");
-
-                            System.out.println(this.fimDeTurno());
-
                             alvo.levarDano(this.agilidade*distancia);
                             this.setPodeSeMover(false);
 
@@ -183,8 +174,6 @@ public class Personagem {
         if (this instanceof Mago){
             if (isPodeSeMover()) {
                 for (Personagem alvo : alvos) {
-
-                    System.out.println(this.getName() + " ataca " + alvo.getName() + " causando " + (this.inteligencia) + " de dano!");
 
                     this.setPodeSeMover(false);
 
