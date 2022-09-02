@@ -1,4 +1,4 @@
-package interfaceClasses;
+package profissoes;
 
 public interface Arqueiro {
 

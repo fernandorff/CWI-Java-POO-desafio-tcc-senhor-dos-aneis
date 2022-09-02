@@ -1,8 +1,8 @@
 package personagens;
 
-import interfaceClasses.Arqueiro;
-import interfaceClasses.Guerreiro;
-import interfaceClasses.Mago;
+import profissoes.Arqueiro;
+import profissoes.Guerreiro;
+import profissoes.Mago;
 
 import java.util.List;
 

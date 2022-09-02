@@ -1,6 +1,6 @@
 package personagens;
 
-import interfaceClasses.Guerreiro;
+import profissoes.Guerreiro;
 import racas.Anao;
 
 public class Gimli extends Personagem implements Guerreiro, Anao {

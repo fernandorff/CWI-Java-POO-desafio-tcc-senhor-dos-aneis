@@ -11,7 +11,7 @@ public class Mapa {
 
     public boolean vitoriaSociedadeDoAnel = false;
 
-    List<String> mapa = new LinkedList<>();
+    List<String> mapaStrings = new LinkedList<>();
 
     List<Personagem> heroisNoMapa = new LinkedList<>();
 
@@ -20,12 +20,12 @@ public class Mapa {
     public Mapa() {
 
         for (int i = 0; i < 10; i++) {
-            mapa.add(i, " ");
+            mapaStrings.add(i, " ");
 
         }
     }
 
-    public boolean isVitoriaSociedadeDoAnel() {
+    protected boolean isVitoriaSociedadeDoAnel() {
 
         return vitoriaSociedadeDoAnel;
     }
@@ -35,10 +35,10 @@ public class Mapa {
         personagem.setPosicao(posicao);
 
         if (personagem.isSociedadeDoAnel()) {
-            mapa.add(posicao, "\033[0;34m" + personagem.toString() + "\033[0m");
+            mapaStrings.add(posicao, personagem.toString());
             heroisNoMapa.add(personagem);
         } else {
-            mapa.add(posicao, "\033[0;31m" + personagem.toString() + "\033[0m");
+            mapaStrings.add(posicao, personagem.toString());
             viloesNoMapa.add(personagem);
         }
 
@@ -48,16 +48,16 @@ public class Mapa {
 
         verificarFim();
 
-        mapa.clear();
+        mapaStrings.clear();
         for (int i = 0; i < 10; i++) {
-            mapa.add(i, "........");
+            mapaStrings.add(i, "........");
 
         }
         for (Personagem personagem : heroisNoMapa) {
 
-            mapa.set(personagem.getPosicao(), "\033[0;34m" + personagem.toString() + "\033[0m");
+            mapaStrings.set(personagem.getPosicao(), personagem.toString());
             if (personagem.getConstituicao() <= 0) {
-                mapa.remove(personagem.toString());
+                mapaStrings.remove(personagem.toString());
                 heroisNoMapa.remove(personagem);
 
                 atualizarMapa();
@@ -66,9 +66,9 @@ public class Mapa {
 
         }
         for (Personagem personagem : viloesNoMapa) {
-            mapa.set(personagem.getPosicao(), "\033[0;31m" + personagem.toString() + "\033[0m");
+            mapaStrings.set(personagem.getPosicao(), personagem.toString());
             if (personagem.getConstituicao() <= 0) {
-                mapa.remove(personagem.toString());
+                mapaStrings.remove(personagem.toString());
                 viloesNoMapa.remove(personagem);
 
                 atualizarMapa();
@@ -94,7 +94,7 @@ public class Mapa {
         }
     }
 
-    public void movimento(Personagem personagem, LinkedList<Personagem> aliados) {
+    public void movimento(Personagem personagem, List<Personagem> aliados) {
 
         int direcao = -1;
         if (!personagem.isSociedadeDoAnel()) {

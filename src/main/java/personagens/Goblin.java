@@ -1,6 +1,6 @@
 package personagens;
 
-import interfaceClasses.Arqueiro;
+import profissoes.Arqueiro;
 import racas.Monstro;
 
 public class Goblin extends Personagem implements Arqueiro, Monstro {

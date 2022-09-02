@@ -1,6 +1,6 @@
 package personagens;
 
-import interfaceClasses.Mago;
+import profissoes.Mago;
 import racas.Maia;
 
 public class Saruman extends Personagem implements Mago, Maia {

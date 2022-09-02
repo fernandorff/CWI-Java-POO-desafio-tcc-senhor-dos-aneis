@@ -1,6 +1,6 @@
 package personagens;
 
-import interfaceClasses.Arqueiro;
+import profissoes.Arqueiro;
 import racas.Elfo;
 
 public class Legolas extends Personagem implements Arqueiro, Elfo {

@@ -1,6 +1,6 @@
 package personagens;
 
-import interfaceClasses.Guerreiro;
+import profissoes.Guerreiro;
 import racas.Humano;
 
 
@@ -34,7 +34,7 @@ public class Aragorn extends Personagem implements Guerreiro, Humano {
 
         if (this.getConstituicao() > 1) {
             setConstituicao(this.getConstituicao() - 1);
-            System.out.println(this.getName() + " envelhece e perde 1 de vida!");
+
         }
 
     }
