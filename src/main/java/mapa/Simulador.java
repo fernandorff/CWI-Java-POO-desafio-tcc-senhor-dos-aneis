@@ -11,7 +11,7 @@ public class Simulador {
 
     public void simular() {
         mapa.atualizarMapa();
-        mapa.mostrarMapa();
+
 
         while (!mapa.isVitoriaSociedadeDoAnel()) {
             mapa.passarTurnoHerois();
@@ -23,7 +23,7 @@ public class Simulador {
 
         }
 
-        System.out.println("VITORIA DA SOCIEDADE DO ANEL");
+
 
     }
 
