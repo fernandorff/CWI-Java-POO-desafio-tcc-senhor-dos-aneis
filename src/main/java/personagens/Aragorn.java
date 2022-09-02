@@ -1,9 +1,13 @@
 package personagens;
 
-import classes.Guerreiro;
+import interfaceClasses.Guerreiro;
 import racas.Humano;
 
-public class Aragorn extends Guerreiro implements Humano {
+
+
+public class Aragorn extends Personagem implements Guerreiro, Humano {
+
+
 
     public Aragorn() {
 
@@ -12,6 +16,8 @@ public class Aragorn extends Guerreiro implements Humano {
         setInteligencia(6);
         setConstituicao(60);
         setSociedadeDoAnel(true);
+
+
     }
 
     @Override
@@ -26,7 +32,7 @@ public class Aragorn extends Guerreiro implements Humano {
 
         if (this.getConstituicao() > 1) {
             setConstituicao(this.getConstituicao() - 1);
-            System.out.println(this.getName() + " envelhece e perde vida!");
+            System.out.println(this.getName() + " envelhece e perde 1 de vida!");
         }
 
     }

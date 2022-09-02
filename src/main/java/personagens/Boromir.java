@@ -1,9 +1,9 @@
 package personagens;
 
-import classes.Guerreiro;
+import interfaceClasses.Guerreiro;
 import racas.Humano;
 
-public class Boromir extends Guerreiro implements Humano {
+public class Boromir extends Personagem implements Guerreiro, Humano {
 
     public Boromir() {
 

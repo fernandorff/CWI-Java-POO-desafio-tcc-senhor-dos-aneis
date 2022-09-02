@@ -1,9 +1,10 @@
 package personagens;
 
-import classes.Guerreiro;
+import interfaceClasses.Arqueiro;
+import interfaceClasses.Guerreiro;
 import racas.Monstro;
 
-public class Orc extends Guerreiro implements Monstro {
+public class Orc extends Personagem implements Guerreiro, Monstro {
 
     public Orc() {
 

@@ -1,9 +1,9 @@
 package personagens;
 
-import classes.Mago;
+import interfaceClasses.Mago;
 import racas.Maia;
 
-public class Gandalf extends Mago implements Maia {
+public class Gandalf extends Personagem implements Mago, Maia {
 
     public Gandalf() {
 

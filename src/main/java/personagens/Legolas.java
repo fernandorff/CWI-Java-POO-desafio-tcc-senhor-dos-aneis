@@ -1,9 +1,9 @@
 package personagens;
 
-import classes.Arqueiro;
+import interfaceClasses.Arqueiro;
 import racas.Elfo;
 
-public class Legolas extends Arqueiro implements Elfo {
+public class Legolas extends Personagem implements Arqueiro, Elfo {
 
     public Legolas() {
 

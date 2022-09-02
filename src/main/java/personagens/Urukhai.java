@@ -1,10 +1,10 @@
 package personagens;
 
-import classes.Guerreiro;
+import interfaceClasses.Guerreiro;
 import racas.Humano;
 import racas.Monstro;
 
-public class Urukhai extends Guerreiro implements Humano, Monstro {
+public class Urukhai extends Personagem implements Guerreiro, Humano, Monstro {
 
     public Urukhai() {
 

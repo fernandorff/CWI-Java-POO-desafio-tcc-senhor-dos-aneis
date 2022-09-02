@@ -1,8 +1,17 @@
 package personagens;
 
+import interfaceClasses.Arqueiro;
+import interfaceClasses.Guerreiro;
+import interfaceClasses.Mago;
+
 import java.util.List;
 
 public class Personagem {
+
+
+    public Personagem() {
+
+    }
 
     private int forca;
 
@@ -84,6 +93,8 @@ public class Personagem {
         return constituicao;
     }
 
+
+
     public void setConstituicao(int constituicao) {
 
         this.constituicao = constituicao;
@@ -120,13 +131,77 @@ public class Personagem {
         return this.getName() + " encerra seu turno na posicao " + this.getPosicao() + " com " + this.getConstituicao() + " de vida restante.";
     }
 
-    public int calcularDano(int multiplicador) {
+//    public int calcularDano(int multiplicador) {
+//
+//        if (this instanceof Guerreiro)
+//    }
 
-        return this.getForca();
+    public void atacar(List<Personagem> alvos){
+
+        if (this instanceof Guerreiro){
+            int direcao = 1;
+            if (this.isSociedadeDoAnel()) {
+                direcao = -1;
+            }
+
+            for (Personagem alvo : alvos) {
+                if (this.getPosicao() == alvo.getPosicao() + direcao) {
+
+                    System.out.println(this.getName() + " ataca " + alvo.getName() + " causando " + (this.getForca() * 2) + " de dano!");
+
+                    System.out.println(this.fimDeTurno());
+
+                    alvo.levarDano(this.getForca() * 2);
+                    this.setPodeSeMover(false);
+                    break;
+
+                }
+
+            }
+        }
+
+        if (this instanceof Arqueiro){
+            int distancia = 3;
+
+            int direcao = 1;
+            if (this.isSociedadeDoAnel()) {
+                direcao = -1;
+            }
+            while(distancia > 0){
+                if (isPodeSeMover()) {
+                    for (Personagem alvo : alvos) {
+                        if (this.getPosicao() == alvo.getPosicao() + (distancia * direcao)) {
+
+                            System.out.println(this.getName() + " ataca " + alvo.getName() + " causando " + (this.agilidade*distancia) + " de dano!");
+
+                            System.out.println(this.fimDeTurno());
+
+                            alvo.levarDano(this.agilidade*distancia);
+                            this.setPodeSeMover(false);
+
+                            break;
+                        }
+                    }
+                }
+                distancia -= 1;
+            }
+        }
+
+        if (this instanceof Mago){
+            if (isPodeSeMover()) {
+                for (Personagem alvo : alvos) {
+
+                    System.out.println(this.getName() + " ataca " + alvo.getName() + " causando " + (this.getInteligencia()) + " de dano!");
+
+                    this.setPodeSeMover(false);
+
+                    alvo.levarDano(this.getInteligencia());
+
+                }
+            }
+        }
+
     }
 
-    public void atacar(List<Personagem> alvo){
-
-    }
 
 }
