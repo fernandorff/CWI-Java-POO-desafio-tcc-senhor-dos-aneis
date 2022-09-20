@@ -1,3 +1,6 @@
+### Avaliação na plataforma SonarQube
+![report senhor dos aneis](https://user-images.githubusercontent.com/101672271/191226503-a8a06071-4bb0-4b94-afea-575ee9e0a1bd.png)
+
 ![A Sociedade do Anel](https://www.intofilm.org/intofilm-production/scaledcropped/1096x548https%3A/s3-eu-west-1.amazonaws.com/images.cdn.filmclub.org/film__3930-the-lord-of-the-rings-the-fellowship-of-the-ring--hi_res-a207bd11.jpg/film__3930-the-lord-of-the-rings-the-fellowship-of-the-ring--hi_res-a207bd11.jpg)
 
 # Senhor dos Anéis
